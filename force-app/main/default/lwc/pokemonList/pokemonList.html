@@ -1,0 +1,12 @@
+<template>
+    <div height="100px">
+        <lightning-datatable key-field="url" data={pokemonsMostrados} columns={columns} hide-checkbox-column="true"
+            onrowaction={handleRowAction}>
+        </lightning-datatable>
+        <div class="slds-float_right slds-size_1-of-1" style="background-color: white; padding: 5px;">
+            <lightning-button onclick={handlePagination} variant="brand" label="Siguiente" title="siguiente"></lightning-button>
+        </div>
+    </div>
+    
+    <c-modal-pokemon respuestah={respuesta} oneventomodal={handleRecibirEventoModal} if:true={container}> </c-modal-pokemon>
+</template>
